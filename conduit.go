@@ -110,7 +110,9 @@ var ConnectService = &cobra.Command{
 		)
 
 		app.RegisterServiceProvider("mysql", &service.MySQL{})
+		app.RegisterServiceProvider("aws-rds-mysqlgpdb", &service.MySQL{})
 		app.RegisterServiceProvider("postgres", &service.Postgres{})
+		app.RegisterServiceProvider("aws-rds-postgresgpdb", &service.Postgres{})
 		app.RegisterServiceProvider("redis", &service.Redis{})
 		app.RegisterServiceProvider("influxdb", &service.InfluxDB{})
 
